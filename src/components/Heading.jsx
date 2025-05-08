@@ -1,40 +1,46 @@
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
-import { Canvas, useFrame } from '@react-three/fiber'
-import { useRef } from 'react'
-import { Model3D } from './Model3D'
+// import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
+// import { Canvas, useFrame } from '@react-three/fiber'
+// import { useRef } from 'react'
+// import { Model3D } from './Model3D'
+import XLogo from '../../public/svgs/x.svg'
+import GithubLogo from '../../public/svgs/github.svg'
+import LinkedinLogo from '../../public/svgs/linkedin.svg'
 
-const RotatingModel = () => {
-  const modelRef = useRef()
+// const RotatingModel = () => {
+//   const modelRef = useRef()
 
-  useFrame((state, delta) => {
-    if (modelRef.current) {
-      modelRef.current.rotation.y += delta * 0.5
-    }
-  })
+//   useFrame((state, delta) => {
+//     if (modelRef.current) {
+//       modelRef.current.rotation.y += delta * 0.5
+//     }
+//   })
 
-  return (
-    <Model3D
-      ref={modelRef}
-      scale={0.32}
-      position={[0, -1.5, 0]}
-    />
-  )
-}
+//   return (
+//     <Model3D
+//       ref={modelRef}
+//       scale={0.32}
+//       position={[0, -1.5, 0]}
+//     />
+//   )
+// }
 
 export const Heading = () => {
   const socials = [
     {
       name: 'x',
+      src: XLogo,
       url: 'https://twitter.com/yerovyespitia',
       className: 'size-4 group-hover:invert',
     },
     {
       name: 'github',
+      src: GithubLogo,
       url: 'https://github.com/yerovyespitia',
       className: 'size-4 scale-150 group-hover:invert',
     },
     {
       name: 'linkedin',
+      src: LinkedinLogo,
       url: 'https://www.linkedin.com/in/yerovyespitia/',
       className: 'size-4 brightness-[100] scale-125 group-hover:invert',
     },
@@ -51,7 +57,7 @@ export const Heading = () => {
           building fast, elegant, and user-focused interfaces
         </span>
       </h1>
-      <div className='w-[300px] lg:w-full h-[380px] animate-fade-up'>
+      {/* <div className='w-[300px] lg:w-full h-[380px] animate-fade-up'>
         <Canvas>
           <PerspectiveCamera
             makeDefault
@@ -62,7 +68,7 @@ export const Heading = () => {
           <RotatingModel />
           <OrbitControls enableZoom={false} />
         </Canvas>
-      </div>
+      </div> */}
       <div className='flex items-center gap-2'>
         {socials.map((social) => (
           <a
@@ -73,7 +79,7 @@ export const Heading = () => {
           >
             <div className='p-4 rounded-full border group border-zinc-700 animate-fade cursor-pointer hover:bg-white hover:text-black transition-all duration-300'>
               <img
-                src={`/svgs/${social.name}.svg`}
+                src={social.src}
                 alt={social.name}
                 className={social.className}
               />

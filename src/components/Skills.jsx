@@ -1,94 +1,112 @@
 import { motion } from 'framer-motion'
+import ReactLogo from '../../public/svgs/react.svg'
+import TypescriptLogo from '../../public/svgs/typescript.svg'
+import NextjsLogo from '../../public/svgs/nextjs.svg'
+import TailwindcssLogo from '../../public/svgs/tailwindcss.svg'
+import GraphqlLogo from '../../public/svgs/graphql.svg'
+import NodejsLogo from '../../public/svgs/nodejs.svg'
+import MongoDBLogo from '../../public/svgs/mongodb.svg'
+import ReduxLogo from '../../public/svgs/redux.svg'
+import SocketioLogo from '../../public/svgs/socketio.svg'
+import BunLogo from '../../public/svgs/bun.svg'
+import ReactRouterLogo from '../../public/svgs/reactrouter.svg'
+import FigmaLogo from '../../public/svgs/figma.svg'
+import PythonLogo from '../../public/svgs/python.svg'
+import JavaLogo from '../../public/svgs/java.svg'
+import GitLogo from '../../public/svgs/git.svg'
+import PostgreSQLLogo from '../../public/svgs/postgresql.svg'
+import HonoLogo from '../../public/svgs/hono.svg'
+import ReactQueryLogo from '../../public/svgs/reactquery.svg'
 
 export const Skills = () => {
   const icons = [
     {
-      src: '/svgs/typescript.svg',
+      src: TypescriptLogo,
       alt: 'typescript',
       title: 'Typescript',
     },
     {
-      src: '/svgs/react.svg',
+      src: ReactLogo,
       alt: 'react',
       title: 'React',
     },
     {
-      src: '/svgs/nextjs.svg',
+      src: NextjsLogo,
       alt: 'nextjs',
       title: 'Next.js',
     },
     {
-      src: '/svgs/tailwindcss.svg',
+      src: TailwindcssLogo,
       alt: 'tailwind',
       title: 'Tailwind',
     },
     {
-      src: '/svgs/reactquery.svg',
+      src: ReactQueryLogo,
       alt: 'reactquery',
       title: 'React Query',
     },
     {
-      src: '/svgs/redux.svg',
+      src: ReduxLogo,
       alt: 'redux',
       title: 'Redux',
     },
     {
-      src: '/svgs/reactrouter.svg',
+      src: ReactRouterLogo,
       alt: 'reactrouter',
       title: 'React Router',
     },
     {
-      src: '/svgs/graphql.svg',
+      src: GraphqlLogo,
       alt: 'graphql',
       title: 'GraphQL',
     },
     {
-      src: '/svgs/nodejs.svg',
+      src: NodejsLogo,
       alt: 'nodejs',
       title: 'Node.js',
     },
     {
-      src: '/svgs/bun.svg',
+      src: BunLogo,
       alt: 'bun',
       title: 'Bun',
     },
     {
-      src: '/svgs/hono.svg',
+      src: HonoLogo,
       alt: 'hono',
       title: 'Hono',
     },
     {
-      src: '/svgs/socketio.svg',
+      src: SocketioLogo,
       alt: 'socketio',
       title: 'Socket.io',
     },
     {
-      src: '/svgs/mongodb.svg',
+      src: MongoDBLogo,
       alt: 'mongodb',
       title: 'Mongodb',
     },
     {
-      src: '/svgs/postgresql.svg',
+      src: PostgreSQLLogo,
       alt: 'postgresql',
       title: 'PostgreSQL',
     },
     {
-      src: '/svgs/python.svg',
+      src: PythonLogo,
       alt: 'python',
       title: 'Python',
     },
     {
-      src: '/svgs/java.svg',
+      src: JavaLogo,
       alt: 'java',
       title: 'Java',
     },
     {
-      src: '/svgs/git.svg',
+      src: GitLogo,
       alt: 'git',
       title: 'Git',
     },
     {
-      src: '/svgs/figma.svg',
+      src: FigmaLogo,
       alt: 'figma',
       title: 'Figma',
     },

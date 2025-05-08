@@ -1,4 +1,15 @@
 import { motion } from 'framer-motion'
+import ReactLogo from '../../public/svgs/react.svg'
+import TypescriptLogo from '../../public/svgs/typescript.svg'
+import NextjsLogo from '../../public/svgs/nextjs.svg'
+import TailwindcssLogo from '../../public/svgs/tailwindcss.svg'
+import GraphqlLogo from '../../public/svgs/graphql.svg'
+import NodejsLogo from '../../public/svgs/nodejs.svg'
+import MongoDBLogo from '../../public/svgs/mongodb.svg'
+import ReduxLogo from '../../public/svgs/redux.svg'
+import SocketioLogo from '../../public/svgs/socketio.svg'
+import BunLogo from '../../public/svgs/bun.svg'
+import ReactRouterLogo from '../../public/svgs/reactrouter.svg'
 
 const ProjectCard = ({
   href,
@@ -7,40 +18,62 @@ const ProjectCard = ({
   description,
   technologies,
   index,
-}) => (
-  <motion.a
-    href={href}
-    target='_blank'
-    rel='noreferrer'
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 1.5, delay: index * 0.5 }}
-  >
-    <div className='bg-primary rounded-xl duration-500 h-[300px] text-md flex flex-col overflow-hidden p-5 border border-transparent transition hover:border-gray-300 hover:scale-[1.02] cursor-pointer'>
-      <div className='flex flex-col space-y-1.5'>
-        <p className='text-white font-bold text-lg cursor-pointer'>{title}</p>
-        <span className='text-gray-300 text-sm font-medium'>{status}</span>
-      </div>
+}) => {
+  const getTechLogo = (tech) => {
+    const logos = {
+      'React': ReactLogo,
+      'Typescript': TypescriptLogo,
+      'Nextjs': NextjsLogo,
+      'TailwindCSS': TailwindcssLogo,
+      'Graphql': GraphqlLogo,
+      'Nodejs': NodejsLogo,
+      'MongoDB': MongoDBLogo,
+      'Redux': ReduxLogo,
+      'Socketio': SocketioLogo,
+      'Bun': BunLogo,
+      'ReactRouter': ReactRouterLogo
+    }
+    return logos[tech] || null
+  }
 
-      <p className='font-sans text-white mt-3'>{description}</p>
+  return (
+    <motion.a
+      href={href}
+      target='_blank'
+      rel='noreferrer'
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.5, delay: index * 0.5 }}
+    >
+      <div className='bg-primary rounded-xl duration-500 h-[300px] text-md flex flex-col overflow-hidden p-5 border border-transparent transition hover:border-gray-300 hover:scale-[1.02] cursor-pointer'>
+        <div className='flex flex-col space-y-1.5'>
+          <p className='text-white font-bold text-lg cursor-pointer'>{title}</p>
+          <span className='text-gray-300 text-sm font-medium'>{status}</span>
+        </div>
 
-      <div className='text-pretty text-sm mt-auto flex mb-2'>
-        <div className='mt-2 flex flex-wrap gap-3 justify-center items-center'>
-          {technologies.map((tech) => (
-            <img
-              key={tech}
-              className='size-7'
-              src={`./svgs/${tech.toLowerCase()}.svg`}
-              alt={tech}
-              title={tech}
-            />
-          ))}
+        <p className='font-sans text-white mt-3'>{description}</p>
+
+        <div className='text-pretty text-sm mt-auto flex mb-2'>
+          <div className='mt-2 flex flex-wrap gap-3 justify-center items-center'>
+            {technologies.map((tech) => {
+              const logoSrc = getTechLogo(tech)
+              return logoSrc ? (
+                <img
+                  key={tech}
+                  className='size-7'
+                  src={logoSrc}
+                  alt={tech}
+                  title={tech}
+                />
+              ) : null
+            })}
+          </div>
         </div>
       </div>
-    </div>
-  </motion.a>
-)
+    </motion.a>
+  )
+}
 
 export const Projects = () => {
   const projects = [
