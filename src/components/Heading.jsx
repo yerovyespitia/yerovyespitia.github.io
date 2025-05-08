@@ -2,9 +2,9 @@
 // import { Canvas, useFrame } from '@react-three/fiber'
 // import { useRef } from 'react'
 // import { Model3D } from './Model3D'
-import XLogo from '../../public/svgs/x.svg'
-import GithubLogo from '../../public/svgs/github.svg'
-import LinkedinLogo from '../../public/svgs/linkedin.svg'
+// import XLogo from '../../public/svgs/x.svg'
+// import GithubLogo from '../../public/svgs/github.svg'
+// import LinkedinLogo from '../../public/svgs/linkedin.svg'
 
 // const RotatingModel = () => {
 //   const modelRef = useRef()
@@ -25,26 +25,26 @@ import LinkedinLogo from '../../public/svgs/linkedin.svg'
 // }
 
 export const Heading = () => {
-  const socials = [
-    {
-      name: 'x',
-      src: XLogo,
-      url: 'https://twitter.com/yerovyespitia',
-      className: 'size-4 group-hover:invert',
-    },
-    {
-      name: 'github',
-      src: GithubLogo,
-      url: 'https://github.com/yerovyespitia',
-      className: 'size-4 scale-150 group-hover:invert',
-    },
-    {
-      name: 'linkedin',
-      src: LinkedinLogo,
-      url: 'https://www.linkedin.com/in/yerovyespitia/',
-      className: 'size-4 brightness-[100] scale-125 group-hover:invert',
-    },
-  ]
+  // const socials = [
+  //   {
+  //     name: 'x',
+  //     src: XLogo,
+  //     url: 'https://twitter.com/yerovyespitia',
+  //     className: 'size-4 group-hover:invert',
+  //   },
+  //   {
+  //     name: 'github',
+  //     src: GithubLogo,
+  //     url: 'https://github.com/yerovyespitia',
+  //     className: 'size-4 scale-150 group-hover:invert',
+  //   },
+  //   {
+  //     name: 'linkedin',
+  //     src: LinkedinLogo,
+  //     url: 'https://www.linkedin.com/in/yerovyespitia/',
+  //     className: 'size-4 brightness-[100] scale-125 group-hover:invert',
+  //   },
+  // ]
 
   return (
     <section className='flex flex-col items-center justify-center gap-8'>
@@ -69,7 +69,7 @@ export const Heading = () => {
           <OrbitControls enableZoom={false} />
         </Canvas>
       </div> */}
-      <div className='flex items-center gap-2'>
+      {/* <div className='flex items-center gap-2'>
         {socials.map((social) => (
           <a
             key={social.name}
@@ -86,7 +86,7 @@ export const Heading = () => {
             </div>
           </a>
         ))}
-      </div>
+      </div> */}
       <button className='bg-black/10 border border-zinc-700 px-6 py-3 text-white rounded-full text-md cursor-pointer hover:bg-white hover:text-black transition-all duration-300 animate-fade-2'>
         Curriculum
       </button>
