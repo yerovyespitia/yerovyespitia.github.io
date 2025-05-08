@@ -6,9 +6,9 @@ import { Experience } from './components/Experience'
 function App() {
   return (
     <main className='flex flex-col gap-16 py-16 max-w-4xl mx-auto px-4'>
-      <div className='h-screen flex items-center justify-center pb-16'>
+      {/* <div className='h-screen flex items-center justify-center pb-16'>
         <Heading />
-      </div>
+      </div> */}
       <div
         className='flex items-center justify-center py-16'
         id='skills'
