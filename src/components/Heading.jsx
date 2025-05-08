@@ -1,7 +1,7 @@
-// import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
-// import { Canvas, useFrame } from '@react-three/fiber'
-// import { useRef } from 'react'
-// import { Model3D } from './Model3D'
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { useRef } from 'react'
+import { Model3D } from './Model3D'
 import XLogo from '../../public/svgs/x.svg'
 import GithubLogo from '../../public/svgs/github.svg'
 import LinkedinLogo from '../../public/svgs/linkedin.svg'
@@ -57,7 +57,7 @@ export const Heading = () => {
           building fast, elegant, and user-focused interfaces
         </span>
       </h1>
-      {/* <div className='w-[300px] lg:w-full h-[380px] animate-fade-up'>
+      <div className='w-[300px] lg:w-full h-[380px] animate-fade-up'>
         <Canvas>
           <PerspectiveCamera
             makeDefault
@@ -65,10 +65,15 @@ export const Heading = () => {
           />
           <ambientLight />
           <directionalLight position={[2, 2, 2]} />
-          <RotatingModel />
+          {/* <RotatingModel /> */}
+          <Model3D
+            // ref={modelRef}
+            scale={0.32}
+            position={[0, -1.5, 0]}
+          />
           <OrbitControls enableZoom={false} />
         </Canvas>
-      </div> */}
+      </div>
       <div className='flex items-center gap-2'>
         <a
           href='https://twitter.com/yerovyespitia'
