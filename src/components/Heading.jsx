@@ -2,9 +2,9 @@
 // import { Canvas, useFrame } from '@react-three/fiber'
 // import { useRef } from 'react'
 // import { Model3D } from './Model3D'
-// import XLogo from '../../public/svgs/x.svg'
-// import GithubLogo from '../../public/svgs/github.svg'
-// import LinkedinLogo from '../../public/svgs/linkedin.svg'
+import XLogo from '../../public/svgs/x.svg'
+import GithubLogo from '../../public/svgs/github.svg'
+import LinkedinLogo from '../../public/svgs/linkedin.svg'
 
 // const RotatingModel = () => {
 //   const modelRef = useRef()
@@ -69,24 +69,47 @@ export const Heading = () => {
           <OrbitControls enableZoom={false} />
         </Canvas>
       </div> */}
-      {/* <div className='flex items-center gap-2'>
-        {socials.map((social) => (
-          <a
-            key={social.name}
-            href={social.url}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <div className='p-4 rounded-full border group border-zinc-700 animate-fade cursor-pointer hover:bg-white hover:text-black transition-all duration-300'>
-              <img
-                src={social.src}
-                alt={social.name}
-                className={social.className}
-              />
-            </div>
-          </a>
-        ))}
-      </div> */}
+      <div className='flex items-center gap-2'>
+        <a
+          href='https://twitter.com/yerovyespitia'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <div className='p-4 rounded-full border group border-zinc-700 animate-fade cursor-pointer hover:bg-white hover:text-black transition-all duration-300'>
+            <img
+              src={XLogo}
+              alt={'X'}
+              className='size-4 group-hover:invert'
+            />
+          </div>
+        </a>
+        <a
+          href='https://github.com/yerovyespitia'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <div className='p-4 rounded-full border group border-zinc-700 animate-fade cursor-pointer hover:bg-white hover:text-black transition-all duration-300'>
+            <img
+              src={GithubLogo}
+              alt={'Github'}
+              className='size-4 scale-150 group-hover:invert'
+            />
+          </div>
+        </a>
+        <a
+          href='https://www.linkedin.com/in/yerovyespitia/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <div className='p-4 rounded-full border group border-zinc-700 animate-fade cursor-pointer hover:bg-white hover:text-black transition-all duration-300'>
+            <img
+              src={LinkedinLogo}
+              alt={'Linkedin'}
+              className='size-4 brightness-[100] scale-125 group-hover:invert'
+            />
+          </div>
+        </a>
+      </div>
       <button className='bg-black/10 border border-zinc-700 px-6 py-3 text-white rounded-full text-md cursor-pointer hover:bg-white hover:text-black transition-all duration-300 animate-fade-2'>
         Curriculum
       </button>
