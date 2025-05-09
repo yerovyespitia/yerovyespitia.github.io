@@ -89,9 +89,14 @@ export const Heading = () => {
           </div>
         </a>
       </div>
-      <button className='bg-black/10 border border-zinc-700 px-6 py-3 text-white rounded-full text-md cursor-pointer hover:bg-white hover:text-black transition-all duration-300 animate-fade-2'>
-        Curriculum
-      </button>
+      <a
+        href='/documents/CV.pdf'
+        download
+      >
+        <button className='bg-black/10 border border-zinc-700 px-6 py-3 text-white rounded-full text-md cursor-pointer hover:bg-white hover:text-black transition-all duration-300 animate-fade-2'>
+          Curriculum
+        </button>
+      </a>
     </section>
   )
 }
