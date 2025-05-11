@@ -30,13 +30,13 @@ export const Heading = () => {
       <p className='text-black bg-white/95 px-4 py-2 rounded-full border border-zinc-700 animate-fade-up'>
         Hey, I'm <span className='font-bold text-zinc-800'>Yerovy</span> 😁
       </p>
-      <h1 className='text-5xl md:text-7xl text-white text-center animate-fade-up'>
+      <h1 className='text-4xl sm:text-5xl md:text-7xl text-white text-center animate-fade-up'>
         Frontend developer{' '}
         <span className='text-zinc-400'>
           building fast, elegant, and user-focused interfaces
         </span>
       </h1>
-      <div className='w-[300px] lg:w-full h-[380px] animate-fade-up'>
+      <div className='w-[200px] sm:w-[300px] lg:w-full sm:h-[380px] h-[280px] animate-fade-up'>
         <Canvas>
           <PerspectiveCamera
             makeDefault
