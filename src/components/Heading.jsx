@@ -31,7 +31,7 @@ export const Heading = () => {
         Hey, I'm <span className='font-bold text-zinc-800'>Yerovy</span> 😁
       </p>
       <h1 className='text-4xl sm:text-5xl md:text-7xl text-white text-center animate-fade-up'>
-        Frontend developer{' '}
+        Web developer{' '}
         <span className='text-zinc-400'>
           building fast, elegant, and user-focused interfaces
         </span>
@@ -89,14 +89,14 @@ export const Heading = () => {
           </div>
         </a>
       </div>
-      <a
+      {/* <a
         href='/documents/CV.pdf'
         download
       >
         <button className='bg-black/10 border border-zinc-700 px-6 py-3 text-white rounded-full text-md cursor-pointer hover:bg-white hover:text-black transition-all duration-300 animate-fade-2'>
           Curriculum
         </button>
-      </a>
+      </a> */}
     </section>
   )
 }
