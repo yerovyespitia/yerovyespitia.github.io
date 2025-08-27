@@ -1,133 +1,115 @@
-import { motion } from 'framer-motion'
-import ReactLogo from '../../public/svgs/react.svg'
-import TypescriptLogo from '../../public/svgs/typescript.svg'
-import NextjsLogo from '../../public/svgs/nextjs.svg'
-import TailwindcssLogo from '../../public/svgs/tailwindcss.svg'
-import GraphqlLogo from '../../public/svgs/graphql.svg'
-import NodejsLogo from '../../public/svgs/nodejs.svg'
-import MongoDBLogo from '../../public/svgs/mongodb.svg'
-import ReduxLogo from '../../public/svgs/redux.svg'
-import SocketioLogo from '../../public/svgs/socketio.svg'
-import BunLogo from '../../public/svgs/bun.svg'
-import ReactRouterLogo from '../../public/svgs/reactrouter.svg'
-import FigmaLogo from '../../public/svgs/figma.svg'
-import PythonLogo from '../../public/svgs/python.svg'
-import JavaLogo from '../../public/svgs/java.svg'
-import GitLogo from '../../public/svgs/git.svg'
-import PostgreSQLLogo from '../../public/svgs/postgresql.svg'
-import HonoLogo from '../../public/svgs/hono.svg'
-import ReactQueryLogo from '../../public/svgs/reactquery.svg'
+import { motion } from "framer-motion";
 
 export const Skills = () => {
   const icons = [
     {
-      src: TypescriptLogo,
-      alt: 'typescript',
-      title: 'Typescript',
+      src: "/svgs/typescript.svg",
+      alt: "typescript",
+      title: "Typescript",
     },
     {
-      src: ReactLogo,
-      alt: 'react',
-      title: 'React',
+      src: "/svgs/react.svg",
+      alt: "react",
+      title: "React",
     },
     {
-      src: NextjsLogo,
-      alt: 'nextjs',
-      title: 'Next.js',
+      src: "/svgs/nextjs.svg",
+      alt: "nextjs",
+      title: "Next.js",
     },
     {
-      src: TailwindcssLogo,
-      alt: 'tailwind',
-      title: 'Tailwind',
+      src: "/svgs/tailwindcss.svg",
+      alt: "tailwind",
+      title: "Tailwind",
     },
     {
-      src: ReactQueryLogo,
-      alt: 'reactquery',
-      title: 'React Query',
+      src: "/svgs/reactquery.svg",
+      alt: "reactquery",
+      title: "React Query",
     },
     {
-      src: ReduxLogo,
-      alt: 'redux',
-      title: 'Redux',
+      src: "/svgs/redux.svg",
+      alt: "redux",
+      title: "Redux",
     },
     {
-      src: ReactRouterLogo,
-      alt: 'reactrouter',
-      title: 'React Router',
+      src: "/svgs/reactrouter.svg",
+      alt: "reactrouter",
+      title: "React Router",
     },
     {
-      src: GraphqlLogo,
-      alt: 'graphql',
-      title: 'GraphQL',
+      src: "/svgs/graphql.svg",
+      alt: "graphql",
+      title: "GraphQL",
     },
     {
-      src: NodejsLogo,
-      alt: 'nodejs',
-      title: 'Node.js',
+      src: "/svgs/nodejs.svg",
+      alt: "nodejs",
+      title: "Node.js",
     },
     {
-      src: BunLogo,
-      alt: 'bun',
-      title: 'Bun',
+      src: "/svgs/bun.svg",
+      alt: "bun",
+      title: "Bun",
     },
     {
-      src: HonoLogo,
-      alt: 'hono',
-      title: 'Hono',
+      src: "/svgs/hono.svg",
+      alt: "hono",
+      title: "Hono",
     },
     {
-      src: SocketioLogo,
-      alt: 'socketio',
-      title: 'Socket.io',
+      src: "/svgs/socketio.svg",
+      alt: "socketio",
+      title: "Socket.io",
     },
     {
-      src: MongoDBLogo,
-      alt: 'mongodb',
-      title: 'Mongodb',
+      src: "/svgs/mongodb.svg",
+      alt: "mongodb",
+      title: "Mongodb",
     },
     {
-      src: PostgreSQLLogo,
-      alt: 'postgresql',
-      title: 'PostgreSQL',
+      src: "/svgs/postgresql.svg",
+      alt: "postgresql",
+      title: "PostgreSQL",
     },
     {
-      src: PythonLogo,
-      alt: 'python',
-      title: 'Python',
+      src: "/svgs/python.svg",
+      alt: "python",
+      title: "Python",
     },
     {
-      src: JavaLogo,
-      alt: 'java',
-      title: 'Java',
+      src: "/svgs/java.svg",
+      alt: "java",
+      title: "Java",
     },
     {
-      src: GitLogo,
-      alt: 'git',
-      title: 'Git',
+      src: "/svgs/git.svg",
+      alt: "git",
+      title: "Git",
     },
     {
-      src: FigmaLogo,
-      alt: 'figma',
-      title: 'Figma',
+      src: "/svgs/figma.svg",
+      alt: "figma",
+      title: "Figma",
     },
-  ]
+  ];
 
   return (
-    <section className='flex flex-col gap-8'>
+    <section className="flex flex-col gap-8">
       <motion.h2
-        className='text-4xl text-white text-center'
+        className="text-4xl text-white text-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        My Tech <span className='text-zinc-400'>Skills</span>
+        My Tech <span className="text-zinc-400">Skills</span>
       </motion.h2>
-      <div className='flex items-center justify-center gap-8 flex-wrap'>
+      <div className="flex items-center justify-center gap-8 flex-wrap">
         {icons.map((skill, index) => (
           <motion.div
             key={index}
-            className='bg-primary flex items-center p-4 md:p-6 rounded-lg'
+            className="bg-primary flex items-center p-4 md:p-6 rounded-lg"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -136,12 +118,12 @@ export const Skills = () => {
             <img
               src={skill.src}
               alt={skill.alt}
-              className='size-12 duration-500 hover:scale-110 hover:rotate-12 transition-transform'
+              className="size-12 duration-500 hover:scale-110 hover:rotate-12 transition-transform"
               title={skill.title}
             />
           </motion.div>
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
